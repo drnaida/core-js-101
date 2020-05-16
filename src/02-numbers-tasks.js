@@ -110,7 +110,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+
 }
 
 /**
@@ -230,8 +230,8 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  if (typeof (value) === 'number' || value instanceof Number || Number.isNaN(value)) {
-    return Number(value);
+  if (+value) {
+    return value;
   }
   return def;
 }
